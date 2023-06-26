@@ -16,7 +16,7 @@ for example "zebra" will be
   abcdefghijklmnopqrstuvwxyz
  
  11001000000000000100000001  which will then be stored in a file called ``` binaryRep.txt``` as an unsigned integer the code for this is in the ```third.c``` file.
-
+This was done to decrease code run time as all I need to do is to do bitwise AND ```&``` to see if the two words have a matching letter or not. 
 # Post-processing
 in the ```final.c ``` file Initially, the program creates a graph from the word representations. If two words' binary representations don't overlap in letters, they are connected in the graph. An adjacency matrix is used to represent the graph. The Bron-Kerbosch technique is then used to search the graph for the most maximum cliques. Each pair of connected nodes forms a clique, which is a subset of nodes. Since they represent word combinations with 25 different letters, cliques of size 5 are of particular importance to us in this situation.The three sets R (current clique), P (potential candidates to add to the clique), and X (excluded candidates) are taken into account by the Bron-Kerbosch method in order to recursively locate all possible cliques. The technique employs several optimisations to prevent computations that are not essential.
 
